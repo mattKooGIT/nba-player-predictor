@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="https://nba-player-predictor.vercel.app")
 
 # load once when app starts to get dynamic playerbase
 df = pd.read_csv("output/engineered_data.csv")
