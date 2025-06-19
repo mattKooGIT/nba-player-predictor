@@ -62,7 +62,7 @@ function App() {
           Enter an NBA Player from the 2024-2025 season
         </p>
         <p style = {{ fontStyle: 'italic', fontWeight: 200, fontSize: '13px' }}>
-          ***Please wait 10-30 seconds for backend to load :D***
+          ⚠️This project may take a few seconds to load if inactive
         </p>
       </div>
       <div className = "search-bar">
