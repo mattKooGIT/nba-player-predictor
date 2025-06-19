@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import PlayerInput from './components/PlayerInput.jsx'
 import PredictionDisplay from './components/PredictionDisplay.jsx';
-import nbaLogo from '../assets/nba_logo.png';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -52,7 +51,7 @@ function App() {
         </div>
         <a href="https://nba.com" target="_blank">
           <img 
-              src = {nbaLogo} 
+              src = "/assets/nba_logo.png"
               className = "nba logo" 
               alt = "NBA logo"
               style = {{ width: '100px', height: 'auto'}} />
