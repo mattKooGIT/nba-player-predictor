@@ -6,9 +6,9 @@ import sys
 from nba_api.stats.static import players
 
 # Add backend/ to Python path so model_utils.py can be found
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
-from backend.model_utils import NBARegressionModel, rolling_features, target_features
+from backend.scripts.model_utils import NBARegressionModel, rolling_features, target_features
 
 # Define base directory
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
