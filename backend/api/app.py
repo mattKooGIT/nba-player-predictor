@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from predict import predict_player_stats
 from flask_cors import CORS
 import pandas as pd
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -31,4 +32,5 @@ def predict():
     return jsonify(prediction)
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    # Use 0.0.0.0 so it listens externally on Render
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=False)
