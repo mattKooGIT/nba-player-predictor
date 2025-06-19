@@ -3,32 +3,12 @@ from .predict import predict_player_stats
 from flask_cors import CORS
 import pandas as pd
 import os
-from backend.model_utils import NBARegressionModel
-import torch
-import joblib
-
-# Define constants
-rolling_features = [
-    'PTS_5game_avg', 'AST_5game_avg', 'REB_5game_avg',
-    'STL_5game_avg', 'TOV_5game_avg', 'BLK_5game_avg',
-    'FG_PCT_5game_avg', 'FT_PCT_5game_avg', 'FG3M_5game_avg'
-]
-target_features = ['PTS', 'AST', 'REB', 'STL', 'TOV', 'BLK', 'FG_PCT', 'FT_PCT', 'FG3M']
-
-# Load model and scalers once
-model = NBARegressionModel(input_dim=len(rolling_features), output_dim=len(target_features))
-model.load_state_dict(torch.load("backend/models/nba_model.pt"))
-model.eval()
-
-scaler_x = joblib.load("backend/models/scaler_x.pkl")
-scaler_y = joblib.load("backend/models/scaler_y.pkl")
-
 
 app = Flask(__name__)
 CORS(app, origins="https://nba-player-predictor.vercel.app")
 
 # load once when app starts to get dynamic playerbase
-df = pd.read_csv("backend/output/predicted_stats.csv")
+df = pd.read_csv("output/engineered_data.csv")
 
 @app.route('/players', methods = ['GET'])
 def get_players():
