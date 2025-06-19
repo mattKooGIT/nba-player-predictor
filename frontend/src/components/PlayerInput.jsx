@@ -9,7 +9,7 @@ const PlayerInput = ({ onPredict, onError }) => {
     useEffect(() => {
         const fetchPlayerNames = async() => {
             try {
-                const response = await fetch("http://127.0.0.1:5000/players");
+                const response = await fetch("https://nba-player-predictor.onrender.com/players");
                 const data = await response.json();
                 setPlayerList(data.players);
             } catch (error) {
