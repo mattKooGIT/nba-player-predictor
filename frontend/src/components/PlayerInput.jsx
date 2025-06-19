@@ -60,7 +60,6 @@ const PlayerInput = ({ onPredict, onError }) => {
     return (
         <form onSubmit = {handleSubmit} 
         style = {{ position: 'relative', display: 'flex', gap: '8px', marginBottom: '20px' }}>
-            <div>
             <input
                 type = "text"
                 placeholder = "Search..."
@@ -106,7 +105,6 @@ const PlayerInput = ({ onPredict, onError }) => {
                     ))}
                 </ul>
             )}
-            </div>
         </form>
     );
 };
