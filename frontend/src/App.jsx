@@ -51,7 +51,7 @@ function App() {
         </div>
         <a href="https://nba.com" target="_blank">
           <img 
-              src = "/assets/nba_logo.png"
+              src = "public/assets/nba_logo.png"
               className = "nba logo" 
               alt = "NBA logo"
               style = {{ width: '100px', height: 'auto'}} />
