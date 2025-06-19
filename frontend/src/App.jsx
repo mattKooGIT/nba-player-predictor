@@ -61,7 +61,7 @@ function App() {
         <p style = {{ fontStyle: 'italic', fontWeight: 100 }}>
           Enter an NBA Player from the 2024-2025 season
         </p>
-        <p style = {{ fontStyle: 'italic', fontWeight: 200, fontSize: '8px' }}>
+        <p style = {{ fontStyle: 'italic', fontWeight: 200, fontSize: '10px' }}>
           ***Please wait 10-30 seconds for backend to load :D***
         </p>
       </div>
