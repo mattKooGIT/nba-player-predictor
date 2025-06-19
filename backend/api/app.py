@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from predict import predict_player_stats
+from .predict import predict_player_stats
 from flask_cors import CORS
 import pandas as pd
 import os
