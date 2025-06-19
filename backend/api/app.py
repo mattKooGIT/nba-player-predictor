@@ -3,7 +3,7 @@ from .predict import predict_player_stats
 from flask_cors import CORS
 import pandas as pd
 import os
-from backend.model_utils import NBARegressionModel, make_prediction
+from backend.model_utils import NBARegressionModel
 import torch
 import joblib
 
