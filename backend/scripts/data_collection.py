@@ -37,4 +37,4 @@ for player in all_players:
 final_df = pd.concat(all_data)
 
 # save to CSV
-final_df.to_csv("nba_all_players_game_logs_{season}.csv", index = False)
+final_df.to_csv(f"nba_all_players_game_logs_{season}.csv", index = False)
