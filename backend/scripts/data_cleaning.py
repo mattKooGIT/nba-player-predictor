@@ -4,8 +4,11 @@ import pandas as pd
 # DATA CLEANING
 # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+
+season = get_current_season()
+
 # load collected data
-df = pd.read_csv("backend/data/nba_all_players_game_logs_2024.csv")
+df = pd.read_csv(f"backend/data/nba_all_players_game_logs_{season}.csv")
 
 # convert GAME_DATE to datetime
 df['GAME_DATE'] = pd.to_datetime(df['GAME_DATE'])

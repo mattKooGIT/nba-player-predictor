@@ -13,13 +13,15 @@ print(f"Found {len(all_players)} active players.")
 
 all_data = []
 
+season = get_current_season()
+
 for player in all_players:
     try:
         name = player['full_name']
         player_id = player['id']
         gamelogs = playergamelog.PlayerGameLog(
             player_id = player_id,
-            season = '2024'
+            season = season
         )
         df = gamelogs.get_data_frames()[0]
         df['PLAYER_NAME'] = name
@@ -35,4 +37,4 @@ for player in all_players:
 final_df = pd.concat(all_data)
 
 # save to CSV
-final_df.to_csv("nba_all_players_game_logs_2024.csv", index = False)
+final_df.to_csv(f"nba_all_players_game_logs_{season}.csv", index = False)
