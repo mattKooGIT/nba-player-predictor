@@ -5,12 +5,12 @@ import os
 import sys
 from nba_api.stats.static import players
 
-# Add backend/ to Python path so model_utils.py can be found
+# add backend/ to python path so model_utils.py can be found
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 from backend.model_utils import NBARegressionModel, rolling_features, target_features
 
-# Define base directory
+# define base directory
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 def get_player_id(player_name):
@@ -23,19 +23,19 @@ def get_player_id(player_name):
 def get_headshot_url(player_id):
     return f"https://cdn.nba.com/headshots/nba/latest/1040x760/{player_id}.png"
 
-# Load scalers
+# load scalers
 scaler_x = joblib.load(os.path.join(BASE_DIR, "models", "scaler_x.pkl"))
 scaler_y = joblib.load(os.path.join(BASE_DIR, "models", "scaler_y.pkl"))
 
-# Load model
+# load model
 model = NBARegressionModel(input_dim=len(rolling_features), output_dim=len(target_features))
 model.load_state_dict(torch.load(os.path.join(BASE_DIR, "models", "nba_model.pt"), map_location=torch.device('cpu')))
 model.eval()
 
-# Load data
+# load data
 df = pd.read_csv(os.path.join(BASE_DIR, "output", "engineered_data.csv"))
 
-# Prediction function
+# prediction function
 def predict_player_stats(player_name):
     player_data = df[df['PLAYER_NAME'].str.lower() == player_name.lower()]
     if player_data.empty:

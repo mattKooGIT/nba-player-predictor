@@ -32,6 +32,6 @@ def predict():
     return jsonify(prediction)
 
 if __name__ == "__main__":
-    # Use 0.0.0.0 so it listens externally on Render
+    # use 0.0.0.0 so it listens externally on Render
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)

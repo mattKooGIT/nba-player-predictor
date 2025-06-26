@@ -1,0 +1,2 @@
+- add a loading button when entering a name
+- update css to look more modern
