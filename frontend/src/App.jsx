@@ -59,7 +59,7 @@ function App() {
       </div>
       <div className = "search-caption">
         <p style = {{ fontStyle: 'italic', fontWeight: 100 }}>
-          Enter an NBA Player from the 2024-2025 season
+          Enter an active NBA Player from the most recent season
         </p>
         <p style = {{ fontStyle: 'italic', fontWeight: 200, fontSize: '13px' }}>
           ⚠️This project may take a few seconds to load if inactive
