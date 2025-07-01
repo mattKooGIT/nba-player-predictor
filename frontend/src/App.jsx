@@ -44,8 +44,8 @@ function App() {
       <title>NBA Stat Line Predictor</title>
       <div style = {{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>
         <div style = {{ textAlign: 'right'}}>
-          <h1 style = {{ margin: 0, marginTop: '0px'}}>NBA Stat Line<br></br> Predictor</h1>
-          <p style = {{ marginTop: '4px', fontWeight: 100, fontSize: '20px' }}>
+          <h1 className = "title">NBA Stat Line<br></br> Predictor</h1>
+          <p className = "subtitle">
             by Matt Koo
           </p>
         </div>
