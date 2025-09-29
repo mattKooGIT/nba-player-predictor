@@ -1,4 +1,4 @@
-NBA Player Performance Predictor
+###NBA Player Performance Predictor
 
 A full-stack project that collects NBA player data, builds predictive models of future performance, and displays predictions in a React web app.
 
